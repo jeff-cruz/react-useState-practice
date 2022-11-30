@@ -9,8 +9,6 @@ const AddUserForm = () => {
           <label>Username</label>
           <input type="text" />
         </div>
-      </div>
-      <div className="new-user__controls">
         <div className="new-user__control">
           <label>Age (Years)</label>
           <input type="text" />

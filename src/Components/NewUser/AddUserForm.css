@@ -1,7 +1,6 @@
 .new-user__controls {
-  display: flex;
+  display: block;
   flex-wrap: wrap;
-  gap: 1rem;
   margin-bottom: 1rem;
   text-align: left;
 }
@@ -10,14 +9,14 @@
   font-weight: bold;
   margin-bottom: 0.5rem;
   display: block;
+  margin-top: .5rem;
 }
 
 .new-user__control input {
   font: inherit;
   padding: 0.5rem;
-  border-radius: 6px;
   border: 1px solid #ccc;
-  width: 20rem;
+  width: 100%;
   max-width: 100%;
 }
 
@@ -29,4 +28,10 @@
   background-color: #4B0B57;
   color: white;
   margin-right: 1rem;
+}
+
+.new-user__button:hover,
+.new-user__button:active {
+  background-color: #7c118f;
+  border-color: #7c118f;
 }
