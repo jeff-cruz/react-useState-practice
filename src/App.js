@@ -1,16 +1,28 @@
-import React from 'react';
-import Card from './UI/Card/Card';
-import AddUserForm from './Components/NewUser/AddUserForm';
+import React from "react";
+import NewUserData from "./Components/NewUser/NewUserData";
 
+// const DUMMY_DATA = [
+//   {
+//     username: "Jeffrey",
+//     age: 28,
+//     id: 1,
+//   },
+// ];
 
 const App = () => {
+  // const [users, setUsers] = useState(DUMMY_DATA);
+
+  // const addUserHandler = (user) => {
+  //   setUsers((prevUsers) => {
+  //     return [users, ...prevUsers];
+  //   });
+  // };
+
   return (
     <div>
-      <Card>
-        <AddUserForm />
-      </Card>
+      <NewUserData />
     </div>
   );
-}
+};
 
 export default App;

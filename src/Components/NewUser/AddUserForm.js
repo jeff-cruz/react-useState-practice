@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./AddUserForm.css";
 
-const AddUserForm = () => {
+const AddUserForm = (props) => {
   const [enteredUsername, setEnteredUsername] = useState("");
   const [enteredAge, setEnteredAge] = useState("");
 
@@ -18,10 +18,11 @@ const AddUserForm = () => {
 
     const userData = {
       username: enteredUsername,
-      age: enteredAge
+      age: enteredAge,
+      id: Math.random().toString()
     }
 
-    console.log('Entered userData:', userData);
+    props.onAddUser(userData);
     setEnteredUsername('');
     setEnteredAge('');
   }
