@@ -1,11 +1,14 @@
 import React from 'react';
 import Card from './UI/Card/Card';
+import AddUserForm from './Components/NewUser/AddUserForm';
 
 
-function App() {
+const App = () => {
   return (
     <div>
-      <Card />
+      <Card>
+        <AddUserForm />
+      </Card>
     </div>
   );
 }
