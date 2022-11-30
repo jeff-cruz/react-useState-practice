@@ -2,17 +2,16 @@ import React from 'react';
 import Card from '../../UI/Card/Card';
 import AddUserForm from './AddUserForm';
 
-const NewUserData = (props) => {
-
-  const receivedUserData = () => {
-    console.log('Added user to NewUserData:', props.onAddUser);
+const NewUserData = () => {
+  const getUserData = (data) => {
+    console.log('Data coming from AddUserForm.js: ', data);
   }
 
   return (
     <Card>
-      <AddUserForm onAddUser={receivedUserData}/>
+      <AddUserForm onSubmit={getUserData} />
     </Card>
-  )
+  );
 }
 
 export default NewUserData

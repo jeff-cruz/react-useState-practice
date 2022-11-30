@@ -22,7 +22,7 @@ const AddUserForm = (props) => {
       id: Math.random().toString()
     }
 
-    props.onAddUser(userData);
+    props.onSubmit(userData);
     setEnteredUsername('');
     setEnteredAge('');
   }
