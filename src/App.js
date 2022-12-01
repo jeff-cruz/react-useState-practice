@@ -23,16 +23,15 @@ const DUMMY_DATA = [
 const App = () => {
   const [users, setUsers] = useState(DUMMY_DATA);
 
-  // function addUserHandler(data) {
-  //   console.log('App.js data:', data);
-  // }
-
   const addUserHandler = (data) => {
+    setUsers((prevUsers) => {
+      return [users, ...prevUsers];
+    })
     console.log('App.js data:', data);
   }
 
   if(DUMMY_DATA.length === 0) {
-    return <NewUserData />
+    return <NewUserData onAddUser={addUserHandler}/>;
   }
 
   return (

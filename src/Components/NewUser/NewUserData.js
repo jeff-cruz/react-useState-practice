@@ -4,11 +4,12 @@ import AddUserForm from './AddUserForm';
 
 const NewUserData = (props) => {
 
-  const getUserData = (data) => {
+  const getUserData = (enteredUserData) => {
     const userData = {
-      ...data,
-      id: Math.random().toString(),
+      ...enteredUserData,
+      id: Math.random().toString()
     };
+    console.log('Received userData from AddUserForm:', userData);
     props.onAddUser(userData);
   }
 
