@@ -9,7 +9,6 @@ const NewUserData = (props) => {
       ...enteredUserData,
       id: Math.random().toString()
     };
-    console.log('Received userData from AddUserForm:', userData);
     props.onAddUser(userData);
   }
 

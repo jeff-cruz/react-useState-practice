@@ -22,22 +22,23 @@ const DUMMY_DATA = [
 
 const App = () => {
   const [users, setUsers] = useState(DUMMY_DATA);
+  const [zeroUsers, setZeroUsers] = useState(true);
 
   const addUserHandler = (data) => {
     setUsers((prevUsers) => {
-      return [users, ...prevUsers];
+      return [data, ...prevUsers];
     })
-    console.log('App.js data:', data);
+    setZeroUsers(false);
   }
 
-  if(DUMMY_DATA.length === 0) {
+  if(zeroUsers === true) {
     return <NewUserData onAddUser={addUserHandler}/>;
   }
 
   return (
     <div>
       <NewUserData onAddUser={addUserHandler}/>
-      <UserList users={DUMMY_DATA}/>
+      <UserList users={users}/>
     </div>
   );
 };
