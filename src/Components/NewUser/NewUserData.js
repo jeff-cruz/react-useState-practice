@@ -2,14 +2,20 @@ import React from 'react';
 import Card from '../../UI/Card/Card';
 import AddUserForm from './AddUserForm';
 
-const NewUserData = () => {
+const NewUserData = (props) => {
+
   const getUserData = (data) => {
-    console.log('Data coming from AddUserForm.js: ', data);
+    const userData = {
+      ...data,
+      id: Math.random().toString(),
+    };
+    props.onAddUser(userData);
   }
+
 
   return (
     <Card>
-      <AddUserForm onSubmit={getUserData} />
+      <AddUserForm addUser={getUserData} />
     </Card>
   );
 }

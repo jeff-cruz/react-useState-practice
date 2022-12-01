@@ -19,10 +19,9 @@ const AddUserForm = (props) => {
     const userData = {
       username: enteredUsername,
       age: enteredAge,
-      id: Math.random().toString()
     }
 
-    props.onSubmit(userData);
+    props.addUser(userData);
     setEnteredUsername('');
     setEnteredAge('');
   }
