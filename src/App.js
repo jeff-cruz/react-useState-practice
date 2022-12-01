@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import NewUserData from "./Components/NewUser/NewUserData";
 import UserList from "./Components/Users/UserList";
+import Modal from "./UI/Modal/Modal";
 
 const DUMMY_DATA = [
   // {
@@ -22,23 +23,28 @@ const DUMMY_DATA = [
 
 const App = () => {
   const [users, setUsers] = useState(DUMMY_DATA);
-  const [zeroUsers, setZeroUsers] = useState(true);
+  const [noUsers, setNoUsers] = useState(true);
 
   const addUserHandler = (data) => {
     setUsers((prevUsers) => {
       return [data, ...prevUsers];
-    })
-    setZeroUsers(false);
-  }
+    });
+    setNoUsers(false);
+  };
 
-  if(zeroUsers === true) {
-    return <NewUserData onAddUser={addUserHandler}/>;
+  if (noUsers === true) {
+    return (
+      <div>
+        <Modal />
+        <NewUserData onAddUser={addUserHandler} />;
+      </div>
+    );
   }
 
   return (
     <div>
-      <NewUserData onAddUser={addUserHandler}/>
-      <UserList users={users}/>
+      <NewUserData onAddUser={addUserHandler} />
+      <UserList users={users} />
     </div>
   );
 };
