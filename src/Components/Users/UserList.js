@@ -5,7 +5,6 @@ import SingleUserData from './singleUserData';
 
 const UserList = (props) => {
 
-  console.log('UserList props:', props.userData);
   return (
     <div>
       <Card>
