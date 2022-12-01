@@ -46,3 +46,11 @@
   height: 2rem;
   width: 4rem;
 }
+
+.open {
+  display: contents;
+}
+
+.close {
+  display: none;
+}

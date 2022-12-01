@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import NewUserData from "./Components/NewUser/NewUserData";
 import UserList from "./Components/Users/UserList";
-import Modal from "./UI/Modal/Modal";
 
 const DUMMY_DATA = [
   // {
@@ -35,7 +34,6 @@ const App = () => {
   if (noUsers === true) {
     return (
       <div>
-        <Modal />
         <NewUserData onAddUser={addUserHandler} />;
       </div>
     );
