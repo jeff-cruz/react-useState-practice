@@ -5,7 +5,7 @@ import Modal from '../../UI/Modal/Modal';
 
 const NewUserData = (props) => {
   const [inputError, setInputError] = useState(false);
-  const [modalMessage, setModalMessage] = useState('Invalid Input');
+  const [modalMessage, setModalMessage] = useState('');
 
   const getUserData = (enteredUserData) => {
       if (
@@ -18,7 +18,7 @@ const NewUserData = (props) => {
         !Number.isInteger(Number(enteredUserData.age)) ||
         Number(enteredUserData.age) <= 0
       ) {
-        setModalMessage("Please enter valid age (>0).");
+        setModalMessage("Please enter valid age.");
         setInputError(true);
       } else {
         const userData = {

@@ -9,8 +9,6 @@ const Modal = (props) => {
     props.close();
   };
 
-
-
   const modalClass = displayModal === false
     ? "close"
     : "open";
