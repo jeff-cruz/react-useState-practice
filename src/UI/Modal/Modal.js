@@ -14,8 +14,8 @@ const Modal = (props) => {
     : "open";
 
   return (
-      <div className={modalClass}>
-        <div className="modal" />
+    <div className={modalClass}>
+      <div className="modal-container" />
         <div className="modal__box">
           <div className="modal__title">
             <h2>Invalid Input</h2>
@@ -27,7 +27,7 @@ const Modal = (props) => {
             Okay
           </button>
         </div>
-      </div>
+    </div>
   );
 };
 

@@ -5,7 +5,7 @@ import Modal from '../../UI/Modal/Modal';
 
 const NewUserData = (props) => {
   const [inputError, setInputError] = useState(false);
-  const [modalMessage, setModalMessage] = useState('');
+  const [modalMessage, setModalMessage] = useState('Invalid Input');
 
   const getUserData = (enteredUserData) => {
       if (
@@ -35,10 +35,10 @@ const NewUserData = (props) => {
 
   return (
     <>
+      {inputError && <Modal message={modalMessage} close={closeModal} />}
       <Card>
         <AddUserForm addUser={getUserData} />
       </Card>
-      {inputError && <Modal message={modalMessage} close={closeModal} />}
     </>
   );
 };

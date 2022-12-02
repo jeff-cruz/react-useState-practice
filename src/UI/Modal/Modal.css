@@ -1,10 +1,12 @@
-.modal {
+.modal-container {
   min-width: 100vw;
   min-height: 100vh;
   z-index: 1001;
+  position: absolute;
+  top: 0;
+  left: 0;
   margin: 0 auto;
-  color: grey;
-  opacity: .5;
+  background-color: rgba(0,0,0,.5);;
 }
 
 .modal__box {
