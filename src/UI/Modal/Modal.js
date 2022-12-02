@@ -9,13 +9,15 @@ const Modal = (props) => {
     props.close();
   };
 
+
+
   const modalClass = displayModal === false
     ? "close"
     : "open";
 
   return (
     <div className={modalClass}>
-      <div className="modal-container" />
+      <div className="modal-container" onClick={closeModal}/>
         <div className="modal__box">
           <div className="modal__title">
             <h2>Invalid Input</h2>
